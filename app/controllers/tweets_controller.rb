@@ -1,8 +1,9 @@
 class TweetsController < ApplicationController
 
-  post '/tweet/:id' do
-    @tweet = Tweet.find(params[:id])
+  get '/tweet/:id' do
     binding.pry
+    @tweet = Tweet.find(params[:id])
+    
     erb :'tweets/show'
   end
 
