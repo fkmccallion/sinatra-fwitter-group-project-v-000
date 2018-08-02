@@ -53,6 +53,14 @@ class TweetsController < ApplicationController
     end
   end
 
+  post '/tweets/:id/edit' do
+    if logged_in?
+      @tweet = Tweet.find(params[:id])
+      if @tweet && @tweet.user == current_user
+        binding.pry
+      end
+  end
+
   post '/tweets/:id/delete' do
 
   end
