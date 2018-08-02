@@ -74,6 +74,7 @@ class TweetsController < ApplicationController
       if @tweet && @tweet.user == current_user
         @tweet.content = params[:content]
         @tweet.delete
+        redirect '/tweets'
       else
         redirect '/tweets'
       end
