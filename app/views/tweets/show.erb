@@ -1,0 +1,11 @@
+<h1>Welcome, <%= current_user.username %></h1>
+
+<% if @user %>
+  <% @user.tweets.each do |t| %>
+    <p>
+      <%= t.content %>
+    </p>
+  <% end %>
+<% elsif @tweet %>
+  <%= @tweet.content %>
+<% end %>
