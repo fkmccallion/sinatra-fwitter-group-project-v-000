@@ -59,6 +59,7 @@ class TweetsController < ApplicationController
       if @tweet && @tweet.user == current_user
         binding.pry
       end
+    end
   end
 
   post '/tweets/:id/delete' do
