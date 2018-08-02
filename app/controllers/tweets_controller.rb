@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
 
   get '/tweet/:id' do
     @tweet = Tweet.find(params[:id])
-    erb :'users/show'
+    erb :'tweets/show'
   end
 
   post '/new' do
