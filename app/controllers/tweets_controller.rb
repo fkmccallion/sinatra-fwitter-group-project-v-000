@@ -27,7 +27,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  get '/tweet/:id' do
+  get '/tweets/:id' do
     if logged_in?
       @tweet = Tweet.find(params[:id])
       if @tweet
