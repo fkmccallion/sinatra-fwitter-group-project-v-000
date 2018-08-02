@@ -1,10 +1,5 @@
 class TweetsController < ApplicationController
 
-  get '/tweet/:id' do
-    @tweet = Tweet.find(params[:id])
-    erb :'tweets/show'
-  end
-
   get '/tweets' do
     if logged_in?
       @tweets = Tweet.all
@@ -30,7 +25,11 @@ class TweetsController < ApplicationController
       @tweet = Tweet.create(content: params[:content], user_id: current_user.id)
       redirect "/tweets"
     end
+  end
 
+  get '/tweet/:id' do
+    @tweet = Tweet.find(params[:id])
+    erb :'tweets/show'
   end
 
 end
