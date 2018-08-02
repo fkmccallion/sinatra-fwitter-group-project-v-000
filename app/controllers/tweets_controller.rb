@@ -40,7 +40,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  post '/tweets/:id/edit' do
+  get '/tweets/:id/edit' do
     binding.pry
     if logged_in?
       @tweet = Tweet.find(params[:id])
