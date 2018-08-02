@@ -3,3 +3,7 @@
 <p>
   <%= @tweet.content %>
 </p>
+
+<form action="/delete" method="POST">
+  <input id="submit" type="submit" value="Delete Tweet">
+</form>
