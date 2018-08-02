@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   get '/tweet/:id' do
-    @tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find_by_id(params[:id])
     erb :'tweets/show'
   end
 
